@@ -1,6 +1,6 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: setup-mdk
+description: setup mdk action
+author: Dead Cells Core Modding
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
@@ -9,15 +9,21 @@ branding:
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
-    required: true
-    default: '1000'
+  modcoreroot:
+    description: The root of ModCore
+    required: false
+    default: ''
+  downloadurl:
+    description: The download url of ModCore
+    required: false
+    default: ''
 
 # Define your outputs here.
 outputs:
-  time:
-    description: Your output description here
+  modcoreroot:
+    description: The root of ModCore
+  mdkroot:
+    description: The root of mdk
 
 runs:
   using: node20
