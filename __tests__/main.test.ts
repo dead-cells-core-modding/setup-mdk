@@ -15,12 +15,10 @@ jest.unstable_mockModule('@actions/core', () => core)
 // The module being tested should be imported dynamically. This ensures that the
 // mocks are used in place of any actual dependencies.
 
-
 describe('main.ts', () => {
   beforeEach(() => {
     // Set the action's inputs as return values from core.getInput().
     core.getInput.mockImplementation(() => '')
-
   })
 
   afterEach(() => {
